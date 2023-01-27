@@ -1,7 +1,7 @@
 package weather.remote
 
-import weather.model.Weather
+import weather.dto.WeatherDto
 
 interface WeatherRemote {
-    fun getWeather(cityName: String) : Weather
+    fun getWeather(cityName: String) : WeatherDto
 }

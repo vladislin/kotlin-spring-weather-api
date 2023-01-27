@@ -1,7 +1,7 @@
 package weather.service
 
-import weather.model.Weather
+import weather.dto.WeatherDto
 
 interface WeatherInCityService {
-    fun getWeather(cityName: String): Weather
+    fun getWeather(cityName: String): WeatherDto
 }
