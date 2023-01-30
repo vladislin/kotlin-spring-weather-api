@@ -9,7 +9,7 @@ class WeatherEntity(
     val id: Int = 0,
     var name: String = "",
     var dt: Int = 0,
-    @OneToOne(mappedBy = "weather", cascade = [(CascadeType.ALL)], fetch = FetchType.EAGER)
+    @OneToOne(mappedBy = "weather", cascade = [(CascadeType.REMOVE)], fetch = FetchType.EAGER)
     @JsonManagedReference
     val main_info: MainInfoEntity? = null
 )

@@ -6,5 +6,5 @@ import weather.entity.WeatherEntity
 
 interface MainInfoRepository: CrudRepository<MainInfoEntity, Int> {
 
-    fun deleteAllByWeather(weather: WeatherEntity)
+    fun deleteByWeather(weather: WeatherEntity)
 }

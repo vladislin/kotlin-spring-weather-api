@@ -25,8 +25,10 @@ class WeatherInCityServiceImpl(
             if (existingWeather.dt != response.dt) {
                 existingWeather.dt = response.dt
                 existingWeather = weatherRepository.save(existingWeather)
-                mainInfoRepository.deleteAllByWeather(existingWeather)
+                mainInfoRepository.deleteByWeather(existingWeather)
                 mainInfoRepository.save(response.main.toEntity(existingWeather))
+                return existingWeather.toDto()
+            } else {
                 return existingWeather.toDto()
             }
         }
