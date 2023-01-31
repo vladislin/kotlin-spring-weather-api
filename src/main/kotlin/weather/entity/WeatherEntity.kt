@@ -9,8 +9,8 @@ import javax.persistence.IdClass
 @Entity
 @IdClass(WeatherId::class)
 class WeatherEntity(
-    @Id var name: String = "",
-    @Id var date: LocalDate = LocalDate.now(),
+    @Id var name: String,
+    @Id var date: LocalDate,
     val temp: Int = 0
 )
 
